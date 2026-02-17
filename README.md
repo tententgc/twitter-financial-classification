@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 Market Sentinel: Twitter Financial Sentiment Analysis
 
-## Getting Started
+Market Sentinel เป็นแอปพลิเคชันเว็บที่ใช้ AI ในการวิเคราะห์อารมณ์ (Sentiment) ของข่าวสารการเงินและทวีตจาก Twitter/X โดยใช้โมเดล **FinBERT** (ผ่าน Hugging Face Inference API) เพื่อช่วยให้นักลงทุนตัดสินใจได้แม่นยำยิ่งขึ้นจากสัญญาณ Bullish หรือ Bearish ในตลาด
 
-First, run the development server:
+---
 
+## ✨ Interface
+![Market Sentinel Interface](./public/readme-profile/interface.png)
+
+---
+
+## 🚀 Features
+
+- **AI-Powered Analysis**: ใช้โมเดล FinBERT ที่ได้รับการปรับแต่งมาเพื่อภาษาการเงินโดยเฉพาะ
+- **Real-time Sentiment Gauge**: แสดงผลการวิเคราะห์ด้วยมาตรวัด (Meter) ที่เปลี่ยนสีตามอารมณ์ของข้อความ
+- **Confidence Breakdown**: แสดงคะแนนความมั่นใจของ AI ในแต่ละด้าน (Positive, Negative, Neutral)
+- **Modern UI/UX**: ออกแบบด้วยดีไซน์แบบ Glassmorphism และ Mesh Gradient ที่สวยงาม
+- **Fluid Animations**: ใช้ Framer Motion เพื่อให้การตอบสนองของหน้าจอมีความลื่นไหล
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **AI Model API**: [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index)
+- **Sentiment Model**: [ProsusAI/finbert](https://huggingface.co/ProsusAI/finbert)
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Prerequisites
+- Node.js 18.x หรือสูงกว่า
+- Hugging Face API Token ([รับโทเคนได้ที่นี่](https://huggingface.co/settings/tokens))
+
+### 2. Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Clone the repository
+git clone [https://github.com/tententgc/twitter-financial-classification.git](https://github.com/tententgc/twitter-financial-classification.git)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Go into the project directory
+cd twitter-financial-classification
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Install dependencies
+npm install
